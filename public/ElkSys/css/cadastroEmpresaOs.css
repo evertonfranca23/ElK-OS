@@ -1,0 +1,153 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Estilos Gerais */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/* Estilo para o Menu Hambúrguer */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,%20255,%20255,%201%29' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#main-content {
+    margin-left: 30px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: margin-left 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilo do Card */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do Formulário */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilo dos Campos do Formulário */
+form .form-group {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+form .form-group label {
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+form .form-group input,
+form .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* 🔹 Ajuste Específico para o Campo de Data */
+form .form-group input[type="date"] {
+    width: 100%; /* Mantém dentro do card */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #main-content {
+        margin-left: 25px;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+    }
+
+    form .form-group {
+        flex: 1 1 100%;
+    }
+
+    /* 🔹 Garante que o campo de data fique dentro do card no mobile */
+    form .form-group input[type="date"] {
+        font-size: 14px;
+    }
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

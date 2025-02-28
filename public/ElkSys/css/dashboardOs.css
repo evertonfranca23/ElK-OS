@@ -1,0 +1,204 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Estilos Gerais */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: relative; /* Importante para centralizar o título */
+    display: flex;
+    justify-content: center; /* Centraliza o título */
+    align-items: center;
+    font-size: 24px;
+    height: 7vh;
+    z-index: 2; /* Mantém o cabeçalho acima de todos os elementos */
+}
+
+/* Título do cabeçalho centralizado */
+.header-title {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o título */
+}
+
+/* Ícones e botão de logout no canto direito */
+.header-icons {
+    position: absolute;
+    right: 15px; /* Posiciona os ícones no canto direito */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo do ícone de usuário */
+.header-icons i {
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+}
+.user-icon, .logout-icon {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff; /* Cor do texto e ícone */
+}
+
+.user-icon:hover, .logout-icon:hover {
+    color: #555; /* Cor ao passar o mouse */
+}
+
+.user-icon i, .logout-icon i {
+    margin-right: 5px;
+}
+
+/* Estilo do botão de logout */
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    background-color: #444;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    align-items: center;
+}
+
+.logout-btn:hover {
+    background-color: #555;
+}
+
+
+/* Estilos do menu lateral */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 200px;
+    height: 100vh; /* Ocupa toda a altura da janela */
+    background-color: #FFF;
+    color: black;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    z-index: 3;
+}
+
+.sidebar a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #b5b5b5;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Cor ao passar o mouse sobre o menu */
+#sidebar ul li a:hover {
+    background-color: #575757; /* Cor ao passar o mouse */
+    color: #fff;
+}
+
+/* Cor quando o item está selecionado */
+#sidebar ul li a.selected {
+    background-color: #575757; /* Cor ao selecionar */
+    color: #fff;
+}
+
+.submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+/* Adiciona um padding-left extra quando o submenu está ativo */
+.submenu.active {
+    padding-left: 25px; /* 15px padrão + 10px extras */
+}
+
+/* Estilos do conteúdo principal */
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #d3d3d3;
+    min-height: calc(100vh - 50px);
+    padding-bottom: 40px; /* Espaço extra entre conteúdo e rodapé */
+}
+
+.card {
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chart {
+    height: 150px; /* Altura fixa para os gráficos */
+    width: 100%; /* Largura ajustável */
+}
+
+/* Ajuste específico para os gráficos */
+.card canvas {
+    max-width: 100%;
+    height: 300px !important;
+}
+
+/* Estilos do rodapé */
+footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Estilos do menu lateral */
+    .sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 200px;
+    height: 100vh; /* Ocupa toda a altura da janela */
+    background-color: #FFF;
+    color: black;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    z-index: 3;
+    }
+}

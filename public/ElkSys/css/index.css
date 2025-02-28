@@ -1,0 +1,147 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Estilo Geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3;
+    text-align: center;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* Botão de Login no Cabeçalho */
+.btn-login {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background-color: #d3d3d3; /* Cinza claro */
+    color: #333;
+}
+
+/* Seções de Informação */
+.info-section {
+    background-color: white;
+    padding: 30px;
+    margin: 15px auto;
+    width: 70%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.info-section h2 {
+    color: #333;
+}
+
+/* Produtos */
+.product-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.product {
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.product p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Contato */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #555;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .info-section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-login {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .product-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+
+    .social-icons a {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
